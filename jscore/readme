@@ -22,3 +22,17 @@ console.log(Boolean("0")); // true
 console.log(Boolean([])); // true
 console.log(Boolean({})); // true
 console.log(Boolean("")); // false
+
+// Remember this hack
+// Outer loop = Rows
+
+// Inner loop = Columns
+
+// Think of an Excel sheet:
+// - i moves to the next row.
+// - j visits every column in that row.
+
+// You can also write the same pattern using repeat():
+for (let i = 4; i >= 1; i--) {
+console.log("\*".repeat(i));
+}

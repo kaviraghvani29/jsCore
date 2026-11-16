@@ -1,0 +1,24 @@
+// Ternary
+condition ? valueIfTrue : valueIfFalse;
+
+// find positive, negative, zero
+console.log(Math.sign(num));
+
+// Important: || uses the right side whenever the left side is falsy, not just when it's empty.
+let displayName = username || "Guest";
+
+// These values are falsy:
+false
+0
+-0
+0n
+""
+null
+undefined
+NaN
+
+console.log(Boolean("false")); // true
+console.log(Boolean("0")); // true
+console.log(Boolean([])); // true
+console.log(Boolean({})); // true
+console.log(Boolean("")); // false

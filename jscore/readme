@@ -36,3 +36,36 @@ console.log(Boolean("")); // false
 for (let i = 4; i >= 1; i--) {
 console.log("\*".repeat(i));
 }
+
+// Useful interview point: find() stops at the first match. It doesn't return all matching elements.
+
+// some() and every()
+// These methods return Boolean values (true or false).
+
+// slice() – Extract elements without changing the original array
+// splice() – Add, remove, or replace elements in the original array
+// slice(start, end) → start is included and end is excluded; original array remains unchanged.
+// splice(start, deleteCount) → start is also excluded; changes the original array.
+// splice(start, deleteCount, newValue); splice(1, 1, "Grapes");
+
+// Important JavaScript trick: Default sort() compares values as strings, so numeric sorting needs special handling.
+numbers.sort((a, b) => a - b);
+
+// split() converts a string into an array.
+// toString()- It converts an array into a string.
+
+// fill() replaces array elements with a specified value.
+numbers.fill(0, 1, 4); //specify start and end index; excluding 4
+
+// Array.of() creates an array from the arguments you pass.
+
+// keys() Indexes
+// values() Values
+// entries() Index + value
+
+let result = numbers.with(1, 99); //replce index 1 with 99
+
+numbers.copyWithin(0, 3);
+// 0 = destination index.
+// 3 = starting index to copy from.
+// It copies [40, 50] to the beginning.

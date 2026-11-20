@@ -69,3 +69,42 @@ numbers.copyWithin(0, 3);
 // 0 = destination index.
 // 3 = starting index to copy from.
 // It copies [40, 50] to the beginning.
+
+let user = { name: "Kavi", age: 25, city: "Pune" };
+
+// 1. Object.keys()
+console.log(Object.keys(user));
+// ["name", "age", "city"]
+
+// 2. Object.values()
+console.log(Object.values(user));
+// ["Kavi", 25, "Pune"]
+
+// 3. Object.entries()
+console.log(Object.entries(user));
+// [["name","Kavi"], ["age",25], ["city","Pune"]]
+
+// 4. Object.assign()
+console.log(Object.assign({}, user));
+// Creates a shallow copy.
+
+// 5. Object.freeze()
+Object.freeze(user);
+user.age = 30; // Won't change age.
+
+// 6. Object.seal()
+let person = { name: "Rahul" };
+Object.seal(person);
+person.name = "Amit"; // Allowed
+person.age = 25; // Not allowed
+
+// 7. Object.hasOwn()
+console.log(Object.hasOwn(user, "name")); // true
+
+// 8. Object.fromEntries()
+let entries = [["name", "Kavi"], ["age", 25]];
+console.log(Object.fromEntries(entries));
+// {name: "Kavi", age: 25}
+
+// 9. Object.is()
+console.log(Object.is(10, 10)); // true

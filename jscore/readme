@@ -108,3 +108,52 @@ console.log(Object.fromEntries(entries));
 
 // 9. Object.is()
 console.log(Object.is(10, 10)); // true
+
+// FUNCTIONS TYPE
+
+// 1. Named function
+function greet() {
+console.log("Hello");
+}
+
+// 2. Anonymous function
+const greet2 = function() {
+console.log("Hello");
+};
+
+// 3. Arrow function
+const greet3 = () => console.log("Hello");
+
+// 4. Function with parameters
+function add(a, b) {
+return a + b;
+}
+
+// 5. Default parameters
+function welcome(name = "Guest") {
+console.log(name);
+}
+
+// 6. Rest parameters
+function total(...numbers) {
+console.log(numbers);
+}
+
+// 7. Callback function
+function process(callback) {
+callback();
+}
+process(() => console.log("Done"));
+
+// 8. IIFE (runs immediately)
+(function() {
+console.log("Executed immediately");
+})();
+
+// let and const are block-scoped.
+
+setTimeout()
+// setTimeout() executes a function after a specified delay.
+
+setInterval()
+// setInterval() repeatedly executes a function after a fixed time interval.
